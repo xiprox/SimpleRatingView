@@ -68,3 +68,9 @@ setNeutralIconDrawable(Drawable drawable)
 setNegativeIconResource(int res)
 setNegativeIconDrawable(Drawable drawable)
 ```
+
+#Sample App
+<a href="https://play.google.com/store/apps/details?id=https://play.google.com/store/apps/details?id=tr.xip.widget.simpleratingview.sample">
+  <img alt="Get it on Google Play"
+       src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" />
+</a>
