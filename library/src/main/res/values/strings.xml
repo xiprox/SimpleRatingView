@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SimpleRatingView</string>
+
+    <string name="srv_rating_positive">positive</string>
+    <string name="srv_rating_neutral">neutral</string>
+    <string name="srv_rating_negative">negative</string>
+</resources>

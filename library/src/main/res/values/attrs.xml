@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SimpleRatingView">
+        <attr name="srw_iconColor" format="color" />
+        <attr name="srv_positiveIcon" format="reference" />
+        <attr name="srv_neutralIcon" format="reference" />
+        <attr name="srv_negativeIcon" format="reference" />
+    </declare-styleable>
+</resources>
