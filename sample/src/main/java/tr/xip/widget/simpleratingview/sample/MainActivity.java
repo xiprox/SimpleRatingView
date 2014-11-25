@@ -34,6 +34,7 @@ public class MainActivity extends ActionBarActivity {
                         break;
                     case NEGATIVE:
                         mRatingText.setText(R.string.srv_rating_negative);
+                        break;
                 }
             }
         });
