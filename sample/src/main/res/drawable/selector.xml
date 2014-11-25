@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@color/srw_selector" android:state_pressed="true" />
+    <item android:drawable="@color/selector" android:state_pressed="true" />
     <item android:state_focused="true">
         <shape>
-            <solid android:color="@color/srw_selector" />
-            <stroke android:color="@color/srw_selector_stroke" />
+            <solid android:color="@color/selector" />
+            <stroke android:color="@color/selector_stroke" />
         </shape>
     </item>
     <item android:drawable="@android:color/transparent" />

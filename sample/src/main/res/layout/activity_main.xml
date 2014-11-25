@@ -38,5 +38,5 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/selector"
         android:padding="16dp"
-        srv:srw_iconColor="@color/apptheme_primary" />
+        srv:srv_iconColor="@color/apptheme_primary" />
 </LinearLayout>

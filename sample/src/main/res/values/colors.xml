@@ -3,4 +3,7 @@
     <color name="apptheme_primary">#F44336</color>
     <color name="apptheme_primary_dark">#D32F2F</color>
     <color name="apptheme_primary_accent">#FFFFFF</color>
+
+    <color name="selector">#25000000</color>
+    <color name="selector_stroke">#30000000</color>
 </resources>
