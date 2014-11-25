@@ -67,8 +67,8 @@ public class SimpleRatingView extends ImageView {
         TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.SimpleRatingView, 0, 0);
 
         try {
-            mIconColor = a.getColor(R.styleable.SimpleRatingView_srw_iconColor,
-                    getResources().getColor(R.color.srw_icon_color_default));
+            mIconColor = a.getColor(R.styleable.SimpleRatingView_srv_iconColor,
+                    getResources().getColor(R.color.srv_icon_color_default));
 
             int positiveIconRes = a.getResourceId(R.styleable.SimpleRatingView_srv_positiveIcon,
                     R.drawable.ic_rating_positive);
