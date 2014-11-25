@@ -29,4 +29,5 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
-apply from: '../maven_push.gradle'
+// Used to upload project to maven central
+// apply from: '../maven_push.gradle'
