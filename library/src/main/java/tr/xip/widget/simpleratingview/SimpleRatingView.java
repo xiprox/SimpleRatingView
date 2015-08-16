@@ -251,6 +251,6 @@ public class SimpleRatingView extends ImageView {
     }
 
     public interface OnRatingChangeListener {
-        public void onRatingChanged(Rating ratingType);
+        void onRatingChanged(Rating ratingType);
     }
 }
