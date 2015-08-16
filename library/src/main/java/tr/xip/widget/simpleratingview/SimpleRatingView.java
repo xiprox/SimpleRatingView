@@ -47,8 +47,6 @@ public class SimpleRatingView extends ImageView {
     private Drawable mNeutralIcon;
     private Drawable mNegativeIcon;
 
-    private Resources res;
-
     public SimpleRatingView(Context context) {
         super(context);
     }
@@ -134,7 +132,7 @@ public class SimpleRatingView extends ImageView {
      * @param color int color resource.
      */
     public void setIconColor(Resources res, int color) {
-        mIconColor = res.getColor(color);
+        mIconColor = getResources().getColor(color);
         notifyChanged();
     }
 
@@ -190,13 +188,6 @@ public class SimpleRatingView extends ImageView {
      */
     public void setNegativeIconDrawable(Drawable drawable) {
         mNegativeIcon = drawable;
-    }
-
-    @Override
-    public Resources getResources() {
-        if (res == null)
-            res = super.getResources();
-        return res;
     }
 
     /**
