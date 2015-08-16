@@ -124,6 +124,7 @@ public class SimpleRatingView extends ImageView {
      */
     public void setIconColor(int color) {
         mIconColor = color;
+        notifyChanged();
     }
 
     /**
@@ -134,6 +135,7 @@ public class SimpleRatingView extends ImageView {
      */
     public void setIconColor(Resources res, int color) {
         mIconColor = res.getColor(color);
+        notifyChanged();
     }
 
     /**
@@ -210,6 +212,16 @@ public class SimpleRatingView extends ImageView {
     @Override
     public void setImageResource(int resId) {
         super.setImageResource(resId);
+        notifyChanged();
+    }
+
+    @Override
+    public void setImageDrawable(Drawable drawable) {
+        super.setImageDrawable(drawable);
+        notifyChanged();
+    }
+
+    public void notifyChanged() {
         setColorFilter(mIconColor, PorterDuff.Mode.SRC_ATOP);
     }
 
