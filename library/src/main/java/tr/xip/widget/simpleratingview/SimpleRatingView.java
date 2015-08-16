@@ -222,10 +222,16 @@ public class SimpleRatingView extends ImageView {
         setColorFilter(mIconColor, PorterDuff.Mode.SRC_ATOP);
     }
 
+    /**
+     * Notifies the view that the icon color has been changed and the view should update itself
+     */
     public void notifyIconColorChanged() {
         setColorFilter();
     }
 
+    /**
+     * Notifies the view that the icon has been changed and the view should update itself
+     */
     public void notifyIconChanged() {
         setSelectedRating(getSelectedRating());
     }
