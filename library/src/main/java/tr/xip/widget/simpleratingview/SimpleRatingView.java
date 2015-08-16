@@ -122,7 +122,7 @@ public class SimpleRatingView extends ImageView {
      */
     public void setIconColor(int color) {
         mIconColor = color;
-        notifyChanged();
+        notifyIconColorChanged();
     }
 
     /**
@@ -133,7 +133,7 @@ public class SimpleRatingView extends ImageView {
      */
     public void setIconColor(Resources res, int color) {
         mIconColor = getResources().getColor(color);
-        notifyChanged();
+        notifyIconColorChanged();
     }
 
     /**
@@ -143,6 +143,7 @@ public class SimpleRatingView extends ImageView {
      */
     public void setPositiveIconResource(int res) {
         mPositiveIcon = getResources().getDrawable(res);
+        notifyIconChanged();
     }
 
     /**
@@ -152,6 +153,7 @@ public class SimpleRatingView extends ImageView {
      */
     public void setPositiveIconDrawable(Drawable drawable) {
         mPositiveIcon = drawable;
+        notifyIconChanged();
     }
 
     /**
@@ -161,6 +163,7 @@ public class SimpleRatingView extends ImageView {
      */
     public void setNeutralIconResource(int res) {
         mNeutralIcon = getResources().getDrawable(res);
+        notifyIconChanged();
     }
 
     /**
@@ -170,6 +173,7 @@ public class SimpleRatingView extends ImageView {
      */
     public void setNeutralIconDrawable(Drawable drawable) {
         mNeutralIcon = drawable;
+        notifyIconChanged();
     }
 
     /**
@@ -179,6 +183,7 @@ public class SimpleRatingView extends ImageView {
      */
     public void setNegativeIconResource(int res) {
         mNegativeIcon = getResources().getDrawable(res);
+        notifyIconChanged();
     }
 
     /**
@@ -188,6 +193,7 @@ public class SimpleRatingView extends ImageView {
      */
     public void setNegativeIconDrawable(Drawable drawable) {
         mNegativeIcon = drawable;
+        notifyIconChanged();
     }
 
     /**
@@ -203,17 +209,25 @@ public class SimpleRatingView extends ImageView {
     @Override
     public void setImageResource(int resId) {
         super.setImageResource(resId);
-        notifyChanged();
+        setColorFilter();
     }
 
     @Override
     public void setImageDrawable(Drawable drawable) {
         super.setImageDrawable(drawable);
-        notifyChanged();
+        setColorFilter();
     }
 
-    public void notifyChanged() {
+    private void setColorFilter() {
         setColorFilter(mIconColor, PorterDuff.Mode.SRC_ATOP);
+    }
+
+    public void notifyIconColorChanged() {
+        setColorFilter();
+    }
+
+    public void notifyIconChanged() {
+        setSelectedRating(getSelectedRating());
     }
 
     private class MyOnClickListener implements OnClickListener {
