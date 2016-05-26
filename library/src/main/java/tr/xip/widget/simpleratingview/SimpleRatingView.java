@@ -142,8 +142,7 @@ public class SimpleRatingView extends ImageView {
      * @param res int icon resource.
      */
     public void setPositiveIconResource(int res) {
-        mPositiveIcon = getResources().getDrawable(res);
-        notifyIconChanged();
+        setPositiveIconDrawable(getResources().getDrawable(res));
     }
 
     /**
@@ -152,8 +151,7 @@ public class SimpleRatingView extends ImageView {
      * @param drawable icon drawable.
      */
     public void setPositiveIconDrawable(Drawable drawable) {
-        mPositiveIcon = drawable;
-        notifyIconChanged();
+        setIconDrawable(drawable, Rating.POSITIVE);
     }
 
     /**
@@ -162,8 +160,7 @@ public class SimpleRatingView extends ImageView {
      * @param res int icon resource.
      */
     public void setNeutralIconResource(int res) {
-        mNeutralIcon = getResources().getDrawable(res);
-        notifyIconChanged();
+        setNeutralIconDrawable(getResources().getDrawable(res));
     }
 
     /**
@@ -172,8 +169,7 @@ public class SimpleRatingView extends ImageView {
      * @param drawable icon drawable.
      */
     public void setNeutralIconDrawable(Drawable drawable) {
-        mNeutralIcon = drawable;
-        notifyIconChanged();
+        setIconDrawable(drawable, Rating.NEUTRAL);
     }
 
     /**
@@ -182,8 +178,7 @@ public class SimpleRatingView extends ImageView {
      * @param res int icon resource.
      */
     public void setNegativeIconResource(int res) {
-        mNegativeIcon = getResources().getDrawable(res);
-        notifyIconChanged();
+        setNegativeIconDrawable(getResources().getDrawable(res));
     }
 
     /**
@@ -192,7 +187,27 @@ public class SimpleRatingView extends ImageView {
      * @param drawable icon drawable.
      */
     public void setNegativeIconDrawable(Drawable drawable) {
-        mNegativeIcon = drawable;
+        setIconDrawable(drawable, Rating.NEGATIVE);
+    }
+    
+    /**
+     * 
+     * 
+     * @param drawable icon drawable.
+     * @param rating The rating level used to select the drawable to be set.
+     */
+    private void setIconDrawable(Drawable drawable, Rating rating) {
+        switch (mSelectedRating) {
+            case NEUTRAL:
+                mNeutralIcon = drawable;
+                break;
+            case POSITIVE:
+                mPositiveIcon = drawable;
+                break;
+            case NEGATIVE:
+                mNegativeIcon = drawable;
+                break;
+        }
         notifyIconChanged();
     }
 
