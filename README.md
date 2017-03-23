@@ -7,7 +7,7 @@ A rating toggle for Android which switches between 3 rating levels: positive, ne
 
 ![simpleratingview](https://cloud.githubusercontent.com/assets/2550945/5184090/c143e70e-74b4-11e4-8bfa-a7ec17416d05.gif)
 
-#Usage
+# Usage
 Since, SimpleRatingView is pushed to the Maven Central repository, all you have to do is to add the following line to your dependencies.
 
 ```
@@ -71,13 +71,13 @@ setNegativeIconResource(int res)
 setNegativeIconDrawable(Drawable drawable)
 ```
 
-#Sample App
+# Sample App
 <a href="https://play.google.com/store/apps/details?id=tr.xip.widget.simpleratingview.sample">
   <img alt="Get it on Google Play"
        src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" />
 </a>
 
-#License
+# License
 ```
 Copyright (C) 2014 Ihsan Isik
 
